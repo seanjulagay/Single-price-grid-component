@@ -9,6 +9,7 @@ html, body {
   padding: 0;
   font-size: 10px;
   font-family: 'Karla', sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -39,6 +40,7 @@ body {
   -webkit-box-shadow: 0 1em 10em -7em black;
           box-shadow: 0 1em 10em -7em black;
   margin: 6em 0;
+  width: 30.5em;
 }
 
 input, textarea, button {
@@ -46,7 +48,7 @@ input, textarea, button {
 }
 
 header, .signup, footer {
-  width: 30.5em;
+  width: 100%;
 }
 
 header {
@@ -137,6 +139,7 @@ footer {
 .signup-container button:hover {
   color: #BFDF32FF;
   background-color: white;
+  cursor: pointer;
 }
 
 .footer-container {
@@ -157,5 +160,64 @@ footer {
   font-weight: lighter;
   color: #9FF7F8FF;
   font-size: 1.35em;
+}
+
+@media all and (min-width: 1024px) {
+  body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 69em;
+  }
+  header, .signup, footer {
+    padding: 2.5em;
+  }
+  header .header-container {
+    margin-top: 0 2em;
+  }
+  header .header-container h1 {
+    font-size: 2.5em;
+    margin: -.5em auto auto;
+  }
+  header .header-container h2 {
+    font-size: 1.9em;
+  }
+  header .header-container p {
+    font-size: 1.7em;
+    margin: auto auto -.5em;
+  }
+  .signup, footer {
+    height: 27em;
+    border-radius: 0;
+    width: 50%;
+  }
+  .signup {
+    border-bottom-left-radius: .5em;
+  }
+  footer {
+    border-bottom-right-radius: .5em;
+  }
+  .signup-container, .footer-container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .signup-container h1, .footer-container h1 {
+    font-size: 1.9em;
+  }
+  .signup-container p, .footer-container p {
+    margin-top: 1.2em;
+    font-size: 1.7em;
+  }
+  .footer-container h1 {
+    margin-bottom: 1em;
+  }
 }
 /*# sourceMappingURL=style.css.map */

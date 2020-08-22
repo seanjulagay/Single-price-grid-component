@@ -10,6 +10,7 @@ html, body {
     padding: 0;
     font-size: 10px;
     font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
     flex-direction: column;
     box-shadow: 0 1em 10em -7em black;
     margin: 6em 0;
+    width: $cardsize;
 }
 
 input, textarea, button {
@@ -32,7 +34,7 @@ input, textarea, button {
 }
 
 header, .signup, footer {
-    width: $cardsize;
+    width: 100%;
 }
 
 header {
@@ -112,6 +114,7 @@ footer {
         &:hover {
             color: $accent-color;
             background-color: white;
+            cursor: pointer;
         }
     }
 }
@@ -130,5 +133,71 @@ footer {
         font-weight: lighter;
         color: #9FF7F8FF;
         font-size: 1.35em;
+    }
+}
+
+@media all and (min-width: 1024px){ 
+    body {
+        justify-content: center;
+    }
+    
+    .wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: $cardsizeweb;
+    }
+
+    header, .signup, footer {
+        padding: $cardpaddingweb;
+    }
+
+    header {
+        .header-container {
+            margin-top: 0 2em;
+            h1 {
+                font-size: $h1sizeweb;
+                margin: -.5em auto auto;
+            }
+            h2 {
+                font-size: $h2sizeweb;
+            }
+            p {
+                font-size: $fontsizeweb;
+                margin: auto auto -.5em;
+            }
+
+        }
+    }
+
+    .signup, footer {
+        height: 27em;
+        border-radius: 0;
+        width: 50%;
+    }
+
+    .signup {
+        border-bottom-left-radius: .5em;
+    }
+    
+    footer {
+        border-bottom-right-radius: .5em;
+    }
+
+    .signup-container, .footer-container {
+        margin-top: 0;
+        margin-bottom: 0;
+        h1 {
+            font-size: $h2sizeweb;
+        }
+        p {
+            margin-top: 1.2em;
+            font-size: $fontsizeweb;
+        }
+    }
+
+    .footer-container {
+        h1 {
+            margin-bottom: 1em;
+        }
     }
 }
